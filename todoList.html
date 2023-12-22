@@ -1,0 +1,27 @@
+<html>
+  <link rel="stylesheet" href="todoList.css">
+  <center>
+<div>
+<input id="int">
+<button  onclick="add()">Add</button>
+<ul id="txt">
+    <li>Routine
+    <button   onclick="deleteele(event)">Delete</button></li>
+</ul>
+
+</div></center></html>
+<script>
+
+  var c=document.getElementById("txt")
+  function add(){
+    var t=document.getElementById("int")
+        var list=document.createElement("li")
+        list.innerHTML=t.value+"<button onclick='deleteele(event)'>Delete</button>"
+        c.append(list)
+  }
+  function deleteele(event){
+        event.target.parentElement.remove()
+  }
+
+
+</script>
